@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/azulturqui</item>
+        <item name="colorPrimaryDark">@color/azulturquioscuro</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+    <style name="Tema" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/azulturqui</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+</resources>
