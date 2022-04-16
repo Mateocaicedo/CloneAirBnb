@@ -10,6 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ActivityCrearCuenta"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityInicio"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityInicioSesion"
+            android:exported="false" />
+        <activity
+            android:name=".activityInicioSesion"
+            android:exported="false"
+            android:label="@string/title_activity_inicio_sesion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,7 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

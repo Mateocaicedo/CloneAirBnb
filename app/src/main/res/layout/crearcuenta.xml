@@ -12,41 +12,39 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="155dp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="25dp"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:paddingLeft="25dp"
+            android:paddingTop="15dp"
+            android:paddingRight="25dp"
+            android:gravity="center"
+            android:paddingBottom="15dp">
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="219dp"
-                android:layout_height="137dp"
+                android:layout_height="85dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp"
                 app:srcCompat="@drawable/ic_azuloscurologo" />
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:layout_width="243dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
                 android:fontFamily="sans-serif"
-                android:text="Inicio de sesión"
+                android:text="Registro"
                 android:textAlignment="center"
                 android:textColor="@color/AzulLogo"
-                android:textSize="30dp"
+                android:textSize="25dp"
+                android:layout_gravity="center"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="Para continuar inicie sesión"
-                android:textAlignment="center"
-                android:textSize="15dp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -63,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:layout_marginBottom="25dp"
+                android:layout_marginBottom="15dp"
                 android:hint="Usuario"
                 app:startIconDrawable="@drawable/ic_baseline_email_24">
 
@@ -78,8 +76,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:layout_marginBottom="25dp"
-                android:hint="Contraseña"
+                android:layout_marginBottom="15dp"
+                android:hint="Contraseña*"
                 app:endIconMode="password_toggle"
                 app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
@@ -90,8 +88,62 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Confirmar contraseña*"
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="15dp"
+                android:hint="Usuario"
+                app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Usuario"
+                android:focusable="false"
+                app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/FechaRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date" />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <Button
-                android:id="@+id/FechaRegistro"
+                android:id="@+id/button17"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginLeft="25dp"
@@ -101,38 +153,7 @@
                 android:textSize="15dp"
                 app:cornerRadius="12dp" />
 
-
         </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="25dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginRight="4dp"
-            android:fontFamily="sans-serif"
-            android:text="¿No tiene una cuenta?"
-            android:textColor="#B000415A"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cree una."
-            android:textColor="@color/azulturquioscuro"
-            android:textSize="15sp"
-            android:textStyle="bold" />
 
     </LinearLayout>
 
