@@ -113,12 +113,13 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="15dp"
-                android:hint="Usuario"
-                app:startIconDrawable="@drawable/ic_baseline_email_24">
+                android:hint="Número de teléfono"
+                app:startIconDrawable="@drawable/ic_baseline_phone_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -128,9 +129,9 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginBottom="20dp"
-                android:hint="Usuario"
+                android:hint="Fecha de nacimiento"
                 android:focusable="false"
-                app:startIconDrawable="@drawable/ic_baseline_email_24">
+                app:startIconDrawable="@drawable/ic_baseline_date_range_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/FechaRegistro"

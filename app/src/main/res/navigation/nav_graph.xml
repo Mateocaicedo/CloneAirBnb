@@ -3,26 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/Fragmentsearch">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.grupoParcial.airbnbclone.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
+        android:id="@+id/Fragmentsearch"
+        android:name="com.grupoParcial.airbnbclone.search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.grupoParcial.airbnbclone.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        android:id="@+id/FragmentMessages"
+        android:name="com.grupoParcial.airbnbclone.messages"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/FragmentHome"
+        android:name="com.grupoParcial.airbnbclone.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragmentPerfil"
+        android:name="com.grupoParcial.airbnbclone.FragmentPerfil"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.grupoParcial.airbnbclone.FragmentSettings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

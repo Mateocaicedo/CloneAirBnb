@@ -1,20 +1,10 @@
 package com.grupoParcial.airbnbclone
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.content.Intent
-import android.view.View
-import android.view.inputmethod.EditorInfo
+import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private val activador = registerForActivityResult(StartActivityForResult()){
@@ -27,8 +17,14 @@ class MainActivity : AppCompatActivity() {
         val PagInicio = findViewById<Button>(R.id.PagInicio)
         val PagInicioSesion = findViewById<Button>(R.id.PagInicioSesion)
         val PagCrearCuenta = findViewById<Button>(R.id.PagCrearCuenta)
+        val random = findViewById<Button>(R.id.button17)
 
 
+
+        random.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            activador.launch(intent)
+        }
         PagInicio.setOnClickListener {
             val intent = Intent(this, ActivityInicio::class.java)
             activador.launch(intent)
@@ -43,5 +39,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ActivityCrearCuenta::class.java)
             activador.launch(intent)
         }
+
+
     }
+
+
 }
