@@ -8,8 +8,8 @@
         android:title="Messages"
         android:icon="@drawable/ic_messages" />
 
-    <item android:id="@+id/FragmentHome"
-        android:title="@string/home"
+    <item android:id="@+id/fragmentHome"
+        android:title="Home"
         android:icon="@drawable/ic_home" />
 
     <item android:id="@+id/fragmentPerfil"
