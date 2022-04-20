@@ -31,6 +31,7 @@
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/activity_main2.xml" value="0.2392857142857143" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/crearcuenta.xml" value="0.259375" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/debugtodasvistas.xml" value="0.22552083333333334" />
+        <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/detalles_alojamiento.xml" value="0.264" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_blank.xml" value="0.11614583333333334" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_messages.xml" value="0.259375" />
@@ -41,24 +42,6 @@
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/inicio.xml" value="0.259375" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/resultaods_search.xml" value="0.25" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/menu/bottom_menu.xml" value="0.259375" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/drawable/ic_bookmark_solid.xml" value="0.126" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/drawable/ic_launcher_background.xml" value="0.126" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/drawable/ic_messages.xml" value="0.126" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/drawable/ic_protection.xml" value="0.126" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/drawable/ic_share_nodes_solid.xml" value="0.126" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/drawable/ic_star.xml" value="0.2285" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/drawable/ic_star_solid.xml" value="0.126" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/activity_main.xml" value="0.32518115942028986" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/activity_main2.xml" value="0.32518115942028986" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/debugtodasvistas.xml" value="0.32518115942028986" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/detalles_alojamiento.xml" value="0.33" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/fragment_home.xml" value="0.32518115942028986" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/fragment_messages.xml" value="0.32518115942028986" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/fragment_search.xml" value="0.25" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/fragment_settings.xml" value="0.1" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/iniciarsesion.xml" value="0.221875" />
-        <entry key="..\:/Users/SP/AndroidStudioProjects/ProyectoMorillo/CloneAirBnb/app/src/main/res/layout/resultaods_search.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb-master/app/src/main/res/drawable/azuloscurologo.xml" value="0.172" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb-master/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1565" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb-master/app/src/main/res/drawable/ic_google.xml" value="0.1" />
