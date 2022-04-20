@@ -37,6 +37,37 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb-master/app/src/main/res/layout/fragment_first.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb-master/app/src/main/res/layout/iniciarsesion.xml" value="0.29259259259259257" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb-master/app/src/main/res/layout/inicio.xml" value="0.1760299625468165" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.329" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/circulo.xml" value="0.138" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/cuadrado.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/fondoperfil.xml" value="0.329" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_azuloscurologo.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_cuenta.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_launcher_background.xml" value="0.329" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_messages.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_protection.xml" value="0.329" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/ic_settings.xml" value="0.153" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/drawable/rectangulo.xml" value="0.228" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/activity_main.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/activity_main2.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/crearcuenta.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/debugtodasvistas.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/fragment_home.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/fragment_messages.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/fragment_perfil.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/fragment_search.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/fragment_settings.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/iniciarsesion.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/layout/inicio.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/menu/bottom_menu.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.196" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CloneAirBnb/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.196" />
       </map>
     </option>
   </component>
