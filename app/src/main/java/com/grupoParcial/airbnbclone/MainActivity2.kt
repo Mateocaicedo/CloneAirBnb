@@ -24,7 +24,6 @@ class MainActivity2 : AppCompatActivity() {
         bottonNavigationView.setupWithNavController(NavController)
 
 
-
     }
 
 
