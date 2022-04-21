@@ -29,10 +29,13 @@
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/drawable/searchview_background.xml" value="0.228" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/activity_main.xml" value="0.259375" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/activity_main2.xml" value="0.2392857142857143" />
+        <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/card_anteriores.xml" value="0.2171875" />
+        <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/card_reservasguardadas.xml" value="0.2" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/crearcuenta.xml" value="0.259375" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/debugtodasvistas.xml" value="0.22552083333333334" />
+        <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/detalles_alojamiento.xml" value="0.136" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_blank.xml" value="0.11614583333333334" />
-        <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_messages.xml" value="0.259375" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_perfil.xml" value="0.259375" />
         <entry key="..\:/MATEO/Tareas/CloneAirBnb/app/src/main/res/layout/fragment_search.xml" value="0.259375" />
