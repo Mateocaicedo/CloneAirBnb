@@ -33,7 +33,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/PerfilNumeroResena"
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/PerfilVerficado"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
                     >
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/PerfilFoto"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
 

@@ -1,6 +1,6 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:top="115dp">
+        android:top="120dp">
         <shape android:shape="rectangle"
             >
             <gradient
@@ -12,7 +12,7 @@
         </shape>
     </item>
     <item
-        android:bottom="115dp">
+        android:bottom="80dp">
         <shape android:shape="rectangle">
             <gradient
                 android:angle="0"
