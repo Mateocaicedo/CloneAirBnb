@@ -96,6 +96,7 @@ class search : Fragment() {
         recycler = rootview.findViewById(R.id.ListaResultados) as RecyclerView
         setRecyclerView()
         return rootview
+
     }
 
     private fun setRecyclerView(){
@@ -104,7 +105,15 @@ class search : Fragment() {
         recycler.layoutManager = LayoutManager
         adapter = (AlojamientosAdapter(list))
         recycler.adapter = adapter
+
+        Clic
+
+
+
     }
+
+
+
     companion object {
         /**
          * Use this factory method to create a new instance of

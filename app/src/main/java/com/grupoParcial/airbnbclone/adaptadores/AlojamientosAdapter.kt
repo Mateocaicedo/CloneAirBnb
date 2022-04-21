@@ -22,6 +22,8 @@ class AlojamientosAdapter(val alojamientos:List<Alojamientos>):RecyclerView.Adap
         }
 
 
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,7 +33,10 @@ class AlojamientosAdapter(val alojamientos:List<Alojamientos>):RecyclerView.Adap
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.render(alojamientos[position])
+
     }
 
     override fun getItemCount(): Int =alojamientos.size
+
+
 }
