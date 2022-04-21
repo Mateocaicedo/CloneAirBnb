@@ -5,7 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.grupoParcial.airbnbclone.R
+import com.grupoParcial.airbnbclone.adaptadores.AlojamientosAdapter
+import com.grupoParcial.airbnbclone.adaptadores.ChatAdapter
+import com.grupoParcial.airbnbclone.model.Alojamientos
+import com.grupoParcial.airbnbclone.model.Chat_loby
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,7 +25,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class messages : Fragment() {
-    // TODO: Rename and change types of parameters
+    private val list:ArrayList<Chat_loby> by lazy { getValores() }
+    private lateinit var recycler: RecyclerView
+    private lateinit var adapter: ChatAdapter
+    private val LayoutManager by lazy { LinearLayoutManager(context) }
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -29,13 +40,33 @@ class messages : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
-
+    private fun getValores(): ArrayList<Chat_loby>{
+        return object: ArrayList<Chat_loby>(){
+            init {
+                add(Chat_loby("Mateo caicedo",
+                    "Buenas quiero alquilar esta casa",
+                    "17:20",
+                    "https://htmlcolorcodes.com/assets/images/html-color-codes-color-palette-generators-thumb.jpg"))
+            }
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_messages, container, false)
+        val rootview =inflater.inflate(R.layout.fragment_messages, container, false)
+        recycler = rootview.findViewById(R.id.Mensaje_lista) as RecyclerView
+        setRecyclerView()
+        return rootview
+    }
+
+    private fun setRecyclerView(){
+        recycler.setHasFixedSize(true)
+        recycler.itemAnimator = DefaultItemAnimator()
+        recycler.layoutManager = LayoutManager
+        adapter = (ChatAdapter(list))
+        recycler.adapter = adapter
     }
 
     companion object {
