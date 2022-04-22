@@ -149,7 +149,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:drawableLeft="@drawable/ic_protection"
+                        android:drawableLeft="@drawable/ic_oojs_ui_icon_language_ltr"
                         android:drawablePadding="6dp"
                         android:textSize="16sp"
                         android:text="Cuenta verificada"
@@ -174,12 +174,23 @@
                     app:dividerInsetEnd="12dp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"/>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    tools:listitem=""></androidx.recyclerview.widget.RecyclerView>
-                </LinearLayout>
+                    android:paddingBottom="6dp"
+                    android:text="Anuncios"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/PerfilAlojamientoUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="6dp"
+                tools:listitem=""></androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
 
     </ScrollView>

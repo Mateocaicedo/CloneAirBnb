@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.grupoParcial.airbnbclone.R
+import com.grupoParcial.airbnbclone.adaptadores.ReservasAdapter
+import com.grupoParcial.airbnbclone.model.Reservas
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +27,12 @@ class FragmentPerfil : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private val AlojamientoUsuario :ArrayList<Reservas> by lazy { getValores() }
+    private lateinit var recycler: RecyclerView
+    private lateinit var adapter: ReservasAdapter
+    private val LayoutManager by lazy { LinearLayoutManager(context) }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -30,12 +41,38 @@ class FragmentPerfil : Fragment() {
         }
     }
 
+    private fun getValores(): ArrayList<Reservas>{
+        return object: ArrayList<Reservas>(){
+            init {
+                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
+                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
+                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
+                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
+                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
+
+            }
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_perfil, container, false)
+        val view=inflater.inflate(R.layout.fragment_perfil, container, false)
+        recycler = view.findViewById(R.id.PerfilAlojamientoUser) as RecyclerView
+
+        setRecyclerView()
+
+        return view
+    }
+
+    fun setRecyclerView(){
+        recycler.setHasFixedSize(true)
+        recycler.itemAnimator = DefaultItemAnimator()
+        recycler.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
+        adapter = (ReservasAdapter(AlojamientoUsuario))
+        recycler.adapter = adapter
     }
 
     companion object {
