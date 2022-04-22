@@ -56,9 +56,9 @@ class AlojamientosAdapter(val alojamientos:List<Alojamientos>, private val liste
         }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-<<<<<<< HEAD
-        holder.render(alojamientos[position])
-=======
+
+        
+
 
         holder.descripcion.text = alojamientos[position].Descripcion
 
@@ -66,7 +66,7 @@ class AlojamientosAdapter(val alojamientos:List<Alojamientos>, private val liste
         holder.direccion.text = alojamientos[position].Descripcion
         holder.precio.text = (alojamientos[position].Precio.toString() + "/Noche")
         holder.image.addData(alojamientos[position].Imagen)
->>>>>>> 2c6bc9cb5abb6ccc85a3e074a722706ef5ee4f8d
+
 
     }
 
