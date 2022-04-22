@@ -1,5 +1,6 @@
 package com.grupoParcial.airbnbclone.fragmentos
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,9 +10,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.grupoParcial.airbnbclone.Detalles_alojamiento
 import com.grupoParcial.airbnbclone.R
 import com.grupoParcial.airbnbclone.model.Alojamientos
 import com.grupoParcial.airbnbclone.adaptadores.AlojamientosAdapter
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 // TODO: Rename parameter arguments, choose names that match
@@ -135,8 +138,16 @@ class search : Fragment(), AlojamientosAdapter.OnItemCLick{
             }
     }
 
-    override fun onItemClick(position: Int) {
+    override fun onItemClick(position: Int, nombre:String, precio:String, desc:String, dire:String,imagen:ArrayList<String?>) {
         Toast.makeText(context, "Item $position", Toast.LENGTH_SHORT).show()
+        val intento1 = Intent(context, Detalles_alojamiento::class.java)
+        intento1.putExtra("nombre", nombre)
+        intento1.putExtra("direccion", dire)
+        intento1.putExtra("precio", precio)
+        intento1.putExtra("descripcion", desc)
+        intento1.putStringArrayListExtra("array",imagen)
+
+        startActivity(intento1)
     }
 
 

@@ -80,7 +80,7 @@ class FragmentHome : Fragment() {
         setRecyclerView2()
         val image = view.findViewById(R.id.imagenAloja) as ImageView
         Picasso.get()
-            .load("https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2022/01/web3-2585263.jpg?itok=zHqw-e1i")
+            .load("https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg")
             .error(R.mipmap.ic_launcher_round)
             .into(image)
         return view

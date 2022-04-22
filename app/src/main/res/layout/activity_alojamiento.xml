@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                android:id="@+id/carousel"
+                android:id="@+id/carouseldetails"
                 android:layout_width="match_parent"
                 android:layout_height="250dp" >
 
@@ -123,7 +123,7 @@
                     app:dividerInsetStart="16dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/nombredetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -138,7 +138,7 @@
 
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/direcciondetaiils"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -150,7 +150,7 @@
                     android:textSize="24dp" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/descipciondetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -302,7 +302,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/preciodetails"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
@@ -323,10 +323,8 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:layout_alignParentBottom="true"
-                    android:layout_gravity="center">
-
-
-                    >
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp">
 
 
                     <TextView
@@ -336,10 +334,9 @@
 
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="8dp"
                         android:drawableEnd="@drawable/ic_paper_plane_solid"
                         android:gravity="center|end"
-
-
                         android:textColor="@color/black"
                         android:textSize="18dp"
 
