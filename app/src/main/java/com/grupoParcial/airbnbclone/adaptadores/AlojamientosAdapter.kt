@@ -2,23 +2,47 @@ package com.grupoParcial.airbnbclone.adaptadores
 
 
 import android.view.LayoutInflater
+import android.view.OnReceiveContentListener
+import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
+import com.grupoParcial.airbnbclone.R
 import com.grupoParcial.airbnbclone.databinding.ResultaodsSearchBinding
 import com.grupoParcial.airbnbclone.model.Alojamientos
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 
-class AlojamientosAdapter(val alojamientos:List<Alojamientos>):RecyclerView.Adapter<AlojamientosAdapter.ViewHolder>() {
+class AlojamientosAdapter(val alojamientos:List<Alojamientos>, private val listener: OnItemCLick
+):RecyclerView.Adapter<AlojamientosAdapter.ViewHolder>() {
 
-    class ViewHolder(val binding: ResultaodsSearchBinding): RecyclerView.ViewHolder(binding.root){
+    interface  OnItemCLick{
+        fun onItemClick(position: Int)
+    }
 
-        fun render(alojami: Alojamientos){
-            binding.descripcion.text = alojami.Nombre
-            binding.nombre.text = alojami.Nombre
-            binding.direccion.text = alojami.Direccion
-            binding.precio.text = alojami.Precio.toString()
-            binding.imagen.addData(alojami.Imagen)
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView),View.OnClickListener {
 
+        var nombre:TextView =itemView.findViewById(R.id.nombresearch)
+        var precio:TextView =itemView.findViewById(R.id.preciosearch)
+        var descripcion:TextView =itemView.findViewById(R.id.descripcionsearch)
+        var image: ImageCarousel =itemView.findViewById(R.id.imagensearch)
+        var direccion:TextView =itemView.findViewById(R.id.direccionsearch)
+
+       init {
+
+           itemView.setOnClickListener (this)
+       }
+
+        override fun onClick(p0: View?) {
+            val position=absoluteAdapterPosition
+            if (position!=RecyclerView.NO_POSITION){
+                listener.onItemClick(position)
+            }
         }
 
 
@@ -27,12 +51,22 @@ class AlojamientosAdapter(val alojamientos:List<Alojamientos>):RecyclerView.Adap
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val itemBinding = ResultaodsSearchBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            return ViewHolder(itemBinding)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.resultaods_search, parent, false)
+        return ViewHolder(v)
         }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+<<<<<<< HEAD
         holder.render(alojamientos[position])
+=======
+
+        holder.descripcion.text = alojamientos[position].Descripcion
+
+        holder.nombre.text = alojamientos[position].Nombre
+        holder.direccion.text = alojamientos[position].Descripcion
+        holder.precio.text = (alojamientos[position].Precio.toString() + "/Noche")
+        holder.image.addData(alojamientos[position].Imagen)
+>>>>>>> 2c6bc9cb5abb6ccc85a3e074a722706ef5ee4f8d
 
     }
 
