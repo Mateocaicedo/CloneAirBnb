@@ -16,13 +16,13 @@
         android:orientation="vertical">
 
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-            android:id="@+id/imagen"
+            android:id="@+id/imagensearch"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             tools:srcCompat="@tools:sample/avatars"/>
 
         <TextView
-            android:id="@+id/descripcion"
+            android:id="@+id/descripcionsearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Descripcion de la foto actual"
@@ -31,7 +31,7 @@
             android:layout_marginRight="20dp"/>
 
         <TextView
-            android:id="@+id/nombre"
+            android:id="@+id/nombresearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre del alojamiento"
@@ -41,7 +41,7 @@
             android:layout_marginRight="20dp"/>
 
         <TextView
-            android:id="@+id/direccion"
+            android:id="@+id/direccionsearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Dirección"
@@ -53,7 +53,7 @@
         <TextView
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:id="@+id/precio"
+            android:id="@+id/preciosearch"
             android:layout_width="match_parent"
             android:layout_height="30dp"
 

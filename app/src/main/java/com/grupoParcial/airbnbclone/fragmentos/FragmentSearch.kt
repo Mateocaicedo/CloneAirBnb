@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +24,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [search.newInstance] factory method to
  * create an instance of this fragment.
  */
-class search : Fragment() {
+class search : Fragment(), AlojamientosAdapter.OnItemCLick{
 
     private val list:ArrayList<Alojamientos> by lazy { getValores() }
     private lateinit var recycler:RecyclerView
@@ -102,7 +103,7 @@ class search : Fragment() {
         recycler.setHasFixedSize(true)
         recycler.itemAnimator = DefaultItemAnimator()
         recycler.layoutManager = LayoutManager
-        adapter = (AlojamientosAdapter(list))
+        adapter = (AlojamientosAdapter(list, this))
         recycler.adapter = adapter
     }
     companion object {
@@ -124,4 +125,10 @@ class search : Fragment() {
                 }
             }
     }
+
+    override fun onItemClick(position: Int) {
+        Toast.makeText(context, "Item $position", Toast.LENGTH_SHORT).show()
+    }
+
+
 }
