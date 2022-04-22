@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="320dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:animateLayoutChanges="true"
-    app:cardCornerRadius="25dp"
+    app:cardCornerRadius="20dp"
     android:elevation="4dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     app:cardUseCompatPadding="true"
     >
 
@@ -17,11 +19,13 @@
 
         >
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imagen"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:scaleType="centerCrop"/>
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="6dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent"/>
 
         <TextView
             android:id="@+id/nombrealojamiento"
@@ -31,16 +35,18 @@
             android:layout_marginRight="20dp"
             android:text="Nombre del alojamiento"
             android:textColor="@color/black"
-            android:textSize="21dp" />
+            android:layout_marginBottom="4dp"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/direccionalojamiento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Direccion"
-            android:textSize="15dp"
+            android:text="Direccion de alojamiento"
+            android:textSize="16dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -46,6 +46,8 @@ class AlojamientosAdapter(val alojamientos:List<Alojamientos>, private val liste
         }
 
 
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -55,6 +57,9 @@ class AlojamientosAdapter(val alojamientos:List<Alojamientos>, private val liste
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
+        
+
+
         holder.descripcion.text = alojamientos[position].Descripcion
 
         holder.nombre.text = alojamientos[position].Nombre
@@ -62,7 +67,10 @@ class AlojamientosAdapter(val alojamientos:List<Alojamientos>, private val liste
         holder.precio.text = (alojamientos[position].Precio.toString() + "/Noche")
         holder.image.addData(alojamientos[position].Imagen)
 
+
     }
 
     override fun getItemCount(): Int =alojamientos.size
+
+
 }

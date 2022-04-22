@@ -91,7 +91,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="360dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp">
@@ -120,8 +120,8 @@
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:dividerInsetStart="16dp"
-                        app:dividerInsetEnd="16dp"
+                        app:dividerInsetStart="12dp"
+                        app:dividerInsetEnd="12dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginBottom="6dp"/>
                 </LinearLayout>
@@ -130,17 +130,17 @@
                     android:layout_height="150dp"
                     android:background="@color/white"
                     android:orientation="vertical"
-                    android:paddingBottom="10dp">
+                    android:layout_marginLeft="16dp">
 
                     <TextView
                         android:id="@+id/PerfilUbicacion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableLeft="@drawable/ic_cuenta"
+                        android:drawableLeft="@drawable/ic_location"
                         android:drawablePadding="6dp"
                         android:gravity="center"
-                        android:text="Anfitrion - Huesped"
+                        android:text="Bogota, Colombia"
                         android:textColor="@color/black"/>
 
                     <TextView
@@ -149,10 +149,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:drawableLeft="@drawable/ic_protection"
+                        android:drawableLeft="@drawable/ic_oojs_ui_icon_language_ltr"
                         android:drawablePadding="6dp"
                         android:textSize="16sp"
-                        android:text="Cuenta verificada"
+                        android:text="Ingles · Español · Mandarín"
                         android:textColor="@color/black"/>
 
                     <TextView
@@ -161,13 +161,36 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="130 Reseñas"
+                        android:text="Trabaja en Odontologia"
                         android:textSize="16sp"
                         android:textColor="@color/black"
-                        android:drawableLeft="@drawable/ic_star"
+                        android:drawableLeft="@drawable/ic_facebook_jobs"
                         android:drawablePadding="6dp"/>
                 </LinearLayout>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerInsetStart="12dp"
+                    app:dividerInsetEnd="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dp"
+                    android:text="Anuncios"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:paddingTop="6dp"
+                    android:textStyle="bold"></TextView>
             </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/PerfilAlojamientoUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:listitem=""></androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
 
     </ScrollView>
