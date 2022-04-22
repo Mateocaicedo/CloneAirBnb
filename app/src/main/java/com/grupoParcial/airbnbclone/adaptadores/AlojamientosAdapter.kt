@@ -12,7 +12,6 @@ import android.widget.Toast
 import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.grupoParcial.airbnbclone.R
-import com.grupoParcial.airbnbclone.databinding.ResultaodsSearchBinding
 import com.grupoParcial.airbnbclone.model.Alojamientos
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
