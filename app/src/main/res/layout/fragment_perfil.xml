@@ -91,7 +91,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="360dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp">
@@ -120,8 +120,8 @@
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:dividerInsetStart="16dp"
-                        app:dividerInsetEnd="16dp"
+                        app:dividerInsetStart="12dp"
+                        app:dividerInsetEnd="12dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginBottom="6dp"/>
                 </LinearLayout>
@@ -130,7 +130,7 @@
                     android:layout_height="150dp"
                     android:background="@color/white"
                     android:orientation="vertical"
-                    android:paddingBottom="10dp">
+                    android:layout_marginLeft="16dp">
 
                     <TextView
                         android:id="@+id/PerfilUbicacion"
@@ -167,7 +167,19 @@
                         android:drawableLeft="@drawable/ic_star"
                         android:drawablePadding="6dp"/>
                 </LinearLayout>
-            </LinearLayout>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerInsetStart="12dp"
+                    app:dividerInsetEnd="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:listitem=""></androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
