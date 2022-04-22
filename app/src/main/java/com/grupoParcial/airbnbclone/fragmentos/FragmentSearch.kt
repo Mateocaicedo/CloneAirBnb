@@ -106,7 +106,7 @@ class search : Fragment() {
         adapter = (AlojamientosAdapter(list))
         recycler.adapter = adapter
 
-        Clic
+
 
 
 
