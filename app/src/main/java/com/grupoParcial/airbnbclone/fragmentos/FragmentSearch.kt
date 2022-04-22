@@ -97,6 +97,7 @@ class search : Fragment(), AlojamientosAdapter.OnItemCLick{
         recycler = rootview.findViewById(R.id.ListaResultados) as RecyclerView
         setRecyclerView()
         return rootview
+
     }
 
     private fun setRecyclerView(){
@@ -105,7 +106,15 @@ class search : Fragment(), AlojamientosAdapter.OnItemCLick{
         recycler.layoutManager = LayoutManager
         adapter = (AlojamientosAdapter(list, this))
         recycler.adapter = adapter
+
+
+
+
+
     }
+
+
+
     companion object {
         /**
          * Use this factory method to create a new instance of
