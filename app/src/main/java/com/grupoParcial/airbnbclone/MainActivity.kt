@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 
         random.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, Detalles_alojamiento::class.java)
             activador.launch(intent)
         }
         PagInicio.setOnClickListener {
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ActivityCrearCuenta::class.java)
             activador.launch(intent)
         }
+
 
 
     }
