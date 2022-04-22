@@ -10,10 +10,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.grupoParcial.airbnbclone.R
-import com.grupoParcial.airbnbclone.adaptadores.AlojamientosAdapter
 import com.grupoParcial.airbnbclone.adaptadores.ReservasAdapter
-import com.grupoParcial.airbnbclone.adaptadores.ReservasAnterioresAdapter
-import com.grupoParcial.airbnbclone.databinding.FragmentHomeBinding
 import com.grupoParcial.airbnbclone.model.Alojamientos
 import com.grupoParcial.airbnbclone.model.Reservas
 import com.squareup.picasso.Picasso
@@ -38,7 +35,7 @@ class FragmentHome : Fragment() {
 
     private val list2:ArrayList<Reservas> by lazy { getValores() }
     private lateinit var recycler2: RecyclerView
-    private lateinit var adapter2: ReservasAnterioresAdapter
+    //private lateinit var adapter2: ReservasAnterioresAdapter
     private val LayoutManager2 by lazy { LinearLayoutManager(context) }
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -102,8 +99,8 @@ class FragmentHome : Fragment() {
         recycler2.setHasFixedSize(true)
         recycler2.itemAnimator = DefaultItemAnimator()
         recycler2.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
-        adapter2 = (ReservasAnterioresAdapter(list2))
-        recycler2.adapter = adapter2
+        adapter = (ReservasAdapter(list2))
+        recycler2.adapter = adapter
     }
     companion object {
         /**
