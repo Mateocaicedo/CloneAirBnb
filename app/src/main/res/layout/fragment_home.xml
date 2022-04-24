@@ -14,7 +14,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/preciodetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
@@ -78,7 +78,7 @@
                         android:id="@+id/textView16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_star_solid"
+                        android:drawableLeft="@drawable/ic_star"
                         />
 
                     <TextView

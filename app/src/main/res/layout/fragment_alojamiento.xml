@@ -51,7 +51,7 @@
                             android:id="@+id/textView1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/ic_star_solid"
+                            android:drawableLeft="@drawable/ic_star"
                             android:drawablePadding="3dp"
                             android:gravity="center"
                             android:paddingEnd="10dp"
@@ -286,82 +286,83 @@
 
 
             </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
 
-            <LinearLayout
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+
+
+            >
+
+            <TextView
+                android:id="@+id/preciodetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center|start"
+                android:text="$15000 / noche"
+                android:textColor="@color/black"
+                android:textSize="20dp"
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
+                />
 
-
-                    >
-
-                    <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center|start"
-                        android:text="$15000 / noche"
-                        android:textColor="@color/black"
-                        android:textSize="20dp"
-
-                        />
-
-
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="center">
-
-
-                    >
-
-
-                    <TextView
-                        android:id="@+id/textView14"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="40dp"
-                        android:drawableEnd="@drawable/ic_paper_plane_solid"
-                        android:gravity="center|end"
-
-
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-
-                        />
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
 
         </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center">
 
 
+            >
 
 
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:drawableEnd="@drawable/ic_paper_plane_solid"
+                android:gravity="center|end"
 
 
+                android:textColor="@color/black"
+                android:textSize="18dp"
 
-    </ScrollView>
+                />
+
+        </RelativeLayout>
 
 
-
+    </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
