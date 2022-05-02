@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,7 +26,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [messages.newInstance] factory method to
  * create an instance of this fragment.
  */
-class messages : Fragment() {
+class messages : Fragment(), ChatAdapter.OnItemCLick{
     private val list:ArrayList<Chat_loby> by lazy { getValores() }
     private lateinit var recycler: RecyclerView
     private lateinit var adapter: ChatAdapter
@@ -48,13 +50,18 @@ class messages : Fragment() {
                     "17:20",
                     "https://htmlcolorcodes.com/assets/images/html-color-codes-color-palette-generators-thumb.jpg"))
             }
+            init {
+                add(Chat_loby("Juana Pi;eros",
+                    "Make this",
+                    "17:21",
+                    "https://www.lavanguardia.com/files/article_main_microformat/uploads/2022/03/12/622c874213775.jpeg"))
+            }
         }
     }
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         val rootview =inflater.inflate(R.layout.fragment_messages, container, false)
         recycler = rootview.findViewById(R.id.Mensaje_lista) as RecyclerView
         setRecyclerView()
@@ -65,7 +72,7 @@ class messages : Fragment() {
         recycler.setHasFixedSize(true)
         recycler.itemAnimator = DefaultItemAnimator()
         recycler.layoutManager = LayoutManager
-        adapter = (ChatAdapter(list))
+        adapter = (ChatAdapter(list,this))
         recycler.adapter = adapter
     }
 
@@ -87,5 +94,9 @@ class messages : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onItemClick(position: Int, nombre: String, mensaje: String, hora: String) {
+        Toast.makeText(context, "$position", Toast.LENGTH_SHORT).show()
     }
 }
