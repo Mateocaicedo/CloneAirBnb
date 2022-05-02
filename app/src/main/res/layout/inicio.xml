@@ -26,42 +26,43 @@
             app:srcCompat="@drawable/blanco_logotipo" />
 
         <Button
-            android:id="@+id/InicarFacebook"
+            android:id="@+id/inicarFacebook"
             style="?attr/materialButtonOutlinedStyle"
-            app:icon="@drawable/ic_icons8_facebook_30"
-            app:iconTint="@null"
-            app:iconGravity="textEnd"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="52dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="8dp"
             android:text="Iniciar sesión con Facebook"
             android:textColor="@color/white"
             app:cornerRadius="12dp"
+            app:icon="@drawable/ic_icons8_facebook_30"
+            app:iconGravity="textEnd"
+            app:iconTint="@null"
             app:strokeColor="@color/white" />
 
 
         <Button
             android:id="@+id/iniciarGoogle"
             style="?attr/materialButtonOutlinedStyle"
-            app:icon="@drawable/ic_google"
-            app:iconTint="@null"
-            app:iconGravity="textEnd"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="52dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="8dp"
             android:text="Iniciar sesión con Google"
             android:textColor="@color/white"
             app:cornerRadius="12dp"
-            app:strokeColor="@color/white" />
+            app:icon="@drawable/ic_google"
+            app:iconGravity="textEnd"
+            app:iconTint="@null"
+            app:strokeColor="@color/white"
+            app:iconPadding="8dp"/>
 
         <Button
             android:id="@+id/iniciarsesion"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="52dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:backgroundTint="@color/white"
@@ -77,27 +78,25 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:orientation="horizontal"
-        android:layout_marginBottom="25dp"
-        >
+        android:layout_marginBottom="25dp">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="4dp"
-            android:fontFamily="sans-serif"
             android:layout_gravity="center"
+            android:layout_marginRight="4dp"
+            style="@style/Texto"
             android:text="¿No tiene una cuenta?"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
+            android:textColor="@color/white"/>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/crearCuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cree una."
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
+            style="@style/Texto"
+            android:textColor="@color/white"
             android:textStyle="bold" />
     </LinearLayout>
 

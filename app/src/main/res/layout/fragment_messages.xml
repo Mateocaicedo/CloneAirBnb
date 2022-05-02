@@ -12,23 +12,28 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="18dp"
-            android:gravity="center"
-            android:text="Mensajes"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-        <com.google.android.material.divider.MaterialDivider
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:dividerInsetEnd="1dp"
-            app:dividerInsetStart="1dp" />
+            android:layout_height="54dp"
+            android:background="@color/white"
+            android:elevation="10dp">
+
+            <TextView
+                android:id="@+id/preciodetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="25dp"
+                style="@style/Titulo"
+                android:text="Mis chats"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Mensaje_lista"

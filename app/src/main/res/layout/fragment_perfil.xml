@@ -9,6 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -37,55 +38,48 @@
                             android:id="@+id/Foto"
                             android:layout_width="130dp"
                             android:layout_height="130dp"
-                            app:srcCompat="@drawable/fotoperfil"
-                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"/>
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                            app:srcCompat="@drawable/fotoperfil" />
                     </LinearLayout>
                 </FrameLayout>
 
                 <LinearLayout
                     android:layout_width="230dp"
                     android:layout_height="150dp"
-                    android:background="@color/white"
-                    android:orientation="vertical"
-                    android:paddingBottom="10dp"
+                    android:gravity="center_vertical"
                     android:layout_marginTop="20dp"
-                    android:paddingTop="10dp">
+                    android:background="@color/white"
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/PerfilTipo"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:drawableLeft="@drawable/ic_cuenta"
-                        android:drawablePadding="6dp"
-                        android:textSize="16sp"
-                        android:text="Anfitrion - Huesped"
-                        android:textColor="@color/black"/>
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/PerfilVerficado"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:drawableLeft="@drawable/ic_protection"
-                        android:drawablePadding="6dp"
-                        android:textSize="16sp"
-                        android:text="Cuenta verificada"
-                        android:textColor="@color/black"/>
+                        <TextView
+                            android:id="@+id/PerfilTipo"
+                            style="@style/ItemLista"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_cuenta"
+                            android:text="Anfitrion - Huesped" />
 
-                    <TextView
-                        android:id="@+id/PerfilNumeroResena"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="130 Reseñas"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        android:drawableLeft="@drawable/ic_star"
-                        android:drawablePadding="6dp"/>
+                        <TextView
+                            android:id="@+id/PerfilVerficado"
+                            style="@style/ItemLista"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_protection"
+                            android:text="Cuenta verificada" />
+
+                        <TextView
+                            android:id="@+id/PerfilNumeroResena"
+                            style="@style/ItemLista"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_star"
+                            android:text="130 Reseñas" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
@@ -95,6 +89,7 @@
                 android:orientation="vertical"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -102,95 +97,84 @@
 
                     <TextView
                         android:id="@+id/PerfilNombre"
+                        style="@style/Titulo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hen-Sen Huang"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
                         android:paddingBottom="6dp"
-                        android:textStyle="bold"></TextView>
+                        android:text="Hen-Sen Huang"></TextView>
 
                     <TextView
                         android:id="@+id/PerfilDescripcion"
+                        style="@style/TextoDescripcion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingBottom="10dp"
                         android:text="Acerca de mi: Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.
-"></TextView>
+"/>
+
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:dividerInsetStart="12dp"
-                        app:dividerInsetEnd="12dp"
                         android:layout_marginTop="6dp"
-                        android:layout_marginBottom="6dp"/>
+                        android:layout_marginBottom="6dp"
+                        app:dividerInsetEnd="12dp"
+                        app:dividerInsetStart="12dp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="230dp"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
                     android:background="@color/white"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="16dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/PerfilUbicacion"
+                        style="@style/ItemLista"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:drawableLeft="@drawable/ic_location"
-                        android:drawablePadding="6dp"
-                        android:gravity="center"
-                        android:text="Bogota, Colombia"
-                        android:textColor="@color/black"/>
+                        android:text="Bogota, Colombia" />
 
                     <TextView
                         android:id="@+id/PerfilIdioma"
+                        style="@style/ItemLista"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
                         android:drawableLeft="@drawable/ic_oojs_ui_icon_language_ltr"
-                        android:drawablePadding="6dp"
-                        android:textSize="16sp"
-                        android:text="Ingles · Español · Mandarín"
-                        android:textColor="@color/black"/>
+                        android:text="Ingles · Español · Mandarín" />
 
                     <TextView
                         android:id="@+id/PerfilTrabajo"
+                        style="@style/ItemLista"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Trabaja en Odontologia"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
                         android:drawableLeft="@drawable/ic_facebook_jobs"
-                        android:drawablePadding="6dp"/>
+                        android:text="Trabaja en Odontologia" />
                 </LinearLayout>
+
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:dividerInsetStart="12dp"
-                    app:dividerInsetEnd="12dp"
                     android:layout_marginTop="6dp"
-                    android:layout_marginBottom="6dp"/>
+                    android:layout_marginBottom="6dp"
+                    app:dividerInsetEnd="12dp"
+                    app:dividerInsetStart="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
                     android:paddingBottom="6dp"
                     android:text="Anuncios"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:paddingTop="6dp"
-                    android:textStyle="bold"></TextView>
+                    style="@style/Titulo"/>
             </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/PerfilAlojamientoUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                tools:listitem=""></androidx.recyclerview.widget.RecyclerView>
+                android:orientation="horizontal"/>
         </LinearLayout>
 
     </ScrollView>

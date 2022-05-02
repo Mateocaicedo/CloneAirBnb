@@ -7,33 +7,47 @@
     android:orientation="vertical"
     tools:context="com.grupoParcial.airbnbclone.fragmentos.FragmentHome">
 
-    <SearchView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <SearchView
+            android:id="@+id/barraBusqueda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="Buscar"></SearchView>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/searchbox"
-        android:iconifiedByDefault="false"
-        android:queryHint="Buscar ">
+        android:gravity="center"
+        android:orientation="vertical">
 
-    </SearchView>
+        <include
+            layout="@layout/fragment_search_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ResourceCycle">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="Resultados"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:layout_marginBottom="20dp"
-        android:textColor="@color/black"/>
+        </include>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/ListaResultados"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        tools:listitem="@layout/resultaods_search"/>
+        <include
+            layout="@layout/search_resultados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ResourceCycle">
+
+        </include>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

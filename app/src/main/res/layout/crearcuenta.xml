@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="15dp"
                 android:hint="Confirmar contraseña*"
                 app:endIconMode="password_toggle"
                 app:startIconDrawable="@drawable/ic_baseline_lock_24">
@@ -144,7 +144,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/iniciarHome"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginLeft="25dp"

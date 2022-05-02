@@ -1,155 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.grupoParcial.airbnbclone.fragmentos.FragmentHome"
     android:scrollbars="none"
-    >
+    tools:context="com.grupoParcial.airbnbclone.fragmentos.FragmentHome">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="54dp"
+            android:background="@color/white"
+            android:elevation="10dp">
 
             <TextView
                 android:id="@+id/preciodetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="25dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:text="Mis viajes"
-                android:textColor="@color/black"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+                style="@style/Titulo"
+                android:text="Mis viajes"/>
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:dividerColor="@color/underline"
-                app:dividerInsetEnd="16dp"
-                app:dividerInsetStart="16dp" />
 
-            <LinearLayout
-                android:layout_marginTop="15dp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
+            android:orientation="vertical"
+            android:elevation="0dp">
+
+            <TextView
+                android:id="@+id/textView14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="25dp">
+
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="Reserva actual"
+                style="@style/Titulo"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:cardCornerRadius="29dp">
+
+                <ImageView
+                    android:id="@+id/imagenAloja"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/rectangulo"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/fotoperfil" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="match_parent"
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_star"
+                    android:layout_marginRight="6dp"/>
 
-                    android:text="Reserva actual"
-                    android:textStyle="bold"
-                    android:textSize="25dp"
-                    android:textColor="@color/black"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginBottom="10dp"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:cardCornerRadius="29dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp">
-
-                    <ImageView
-                        android:id="@+id/imagenAloja"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/rectangulo"
-                        tools:src="@drawable/fotoperfil" />
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_star"
-                        />
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:gravity="center"
-                        android:text="Puntua este alojamiento"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-
-                        />
-
-                </LinearLayout>
+                    android:text="Puntua este alojamiento"
+                    style="@style/TextoGrande"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginBottom="25dp">
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Reservas guardados"
-                    android:layout_marginLeft="25dp"
-                    android:textSize="22dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/reservasG"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none"
-
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Reservas Anteriores"
-                    android:layout_marginLeft="25dp"
-                    android:textSize="22dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/reservasAnteriores"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none"
-
-                    />
-            </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="Reservas guardados"
+                style="@style/Titulo"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reservasG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="Reservas Anteriores"
+                style="@style/Titulo"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reservasAnteriores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </LinearLayout>
 
 
 </ScrollView>

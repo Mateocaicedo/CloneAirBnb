@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".fragmentos.ActivityResultado"
+            android:exported="false" />
+        <activity
             android:name=".Detalles_alojamiento"
             android:exported="false" />
         <activity

@@ -4,8 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.grupoParcial.airbnbclone.databinding.CardReservasguardadasBinding
-import com.grupoParcial.airbnbclone.databinding.ResultaodsSearchBinding
-import com.grupoParcial.airbnbclone.model.Alojamientos
 import com.grupoParcial.airbnbclone.model.Reservas
 import com.squareup.picasso.Picasso
 

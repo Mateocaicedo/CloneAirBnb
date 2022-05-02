@@ -8,9 +8,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.grupoParcial.airbnbclone.databinding.ActivityMain2Binding
 import com.grupoParcial.airbnbclone.model.Alojamientos
 class MainActivity2 : AppCompatActivity() {
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,11 +19,5 @@ class MainActivity2 : AppCompatActivity() {
 
         val NavController = navHostFragment.navController
         bottonNavigationView.setupWithNavController(NavController)
-
-
     }
-
-
-
-
 }

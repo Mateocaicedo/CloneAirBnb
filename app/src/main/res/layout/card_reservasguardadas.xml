@@ -24,8 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:scaleType="centerCrop"
-            android:layout_marginBottom="6dp"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent"/>
+            android:layout_marginBottom="6dp"/>
 
         <TextView
             android:id="@+id/nombrealojamiento"
@@ -34,19 +33,18 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:text="Nombre del alojamiento"
-            android:textColor="@color/black"
             android:layout_marginBottom="4dp"
-            android:textSize="20dp" />
+            style="@style/TextoGrande"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/direccionalojamiento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Direccion de alojamiento"
-            android:textSize="16dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
-            android:textColor="@color/black"/>
+            style="@style/Texto"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -25,12 +25,11 @@
                     android:id="@+id/carouseldetails"
                     android:layout_width="match_parent"
                     android:layout_height="250dp">
-
                 </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="55dp"
                     android:layout_gravity="center"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
@@ -52,22 +51,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_star"
-                                android:paddingRight="4dp"
-                                android:textColor="@color/black" />
+                                android:paddingRight="4dp"/>
                             <TextView
                                 android:id="@+id/ValorResena"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4.97"
-                                android:textColor="@color/black"
-                                android:textSize="16dp"
-                                android:textAlignment="center"/>
+                                style="@style/Texto"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="·"
-                                android:textColor="@color/black"
-                                android:textSize="16dp"
+                                style="@style/Texto"
                                 android:paddingStart="4dp"
                                 android:paddingEnd="4dp"
                                 android:textStyle="bold"/>
@@ -77,8 +72,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4 reseñas"
-                                android:textColor="@color/black"
-                                android:textSize="16dp" />
+                                style="@style/Texto"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -92,24 +86,21 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Cartagena"
-                                android:textColor="@color/black"
-                                android:textSize="16dp"/>
+                                style="@style/Texto"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="·"
-                                android:textColor="@color/black"
-                                android:textSize="16dp"
                                 android:paddingStart="4dp"
                                 android:paddingEnd="4dp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold"
+                                style="@style/Texto"/>
                             <TextView
                                 android:id="@+id/Pais"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Colombia"
-                                android:textColor="@color/black"
-                                android:textSize="16dp"/>
+                                style="@style/Texto"/>
                         </LinearLayout>
 
                         <com.google.android.material.imageview.ShapeableImageView
@@ -133,7 +124,6 @@
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="6dp"
                         app:dividerInsetEnd="16dp"
                         app:dividerInsetStart="16dp" />
 
@@ -141,13 +131,10 @@
                         android:id="@+id/nombredetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
                         android:text="Nombre de alojamiento"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="24dp"
-                        android:textStyle="bold" />
-
+                        android:layout_marginTop="12dp"
+                        style="@style/Titulo"/>
 
                     <TextView
                         android:id="@+id/direcciondetaiils"
@@ -156,18 +143,17 @@
                         android:fontFamily="sans-serif"
                         android:text="Dirección #"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        style="@style/TextoGrande"/>
 
                     <TextView
                         android:id="@+id/descipciondetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="12dp"
                         android:fontFamily="sans-serif"
                         android:text="1 Recamara · 1 baño · 2 camas"
-                        android:textAlignment="center"
-                        android:textSize="16dp" />
+                        style="@style/TextoDescripcion"/>
 
 
                 </LinearLayout>
@@ -194,70 +180,52 @@
                         android:paddingBottom="10dp"
                         android:text="¿Que ofrecemos?"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="22dp"
-                        android:textStyle="bold" />
+                        style="@style/Titulo"/>
 
 
                     <TextView
                         android:id="@+id/textView8"
+                        style="@style/TextoGrande"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="10dp"
-
                         android:drawableLeft="@drawable/ic_utensils_solid"
                         android:drawablePadding="8dp"
-                        android:text="Cocina"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-
-                        />
+                        android:text="Cocina"/>
 
                     <TextView
                         android:id="@+id/textView9"
+                        style="@style/TextoGrande"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="10dp"
-
                         android:drawableLeft="@drawable/ic_heating_svgrepo_com__1_"
                         android:drawablePadding="8dp"
-                        android:text="Calefacción"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-
-                        />
+                        android:text="Calefacción"/>
 
                     <TextView
                         android:id="@+id/textView10"
+                        style="@style/TextoGrande"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="10dp"
-
                         android:drawableLeft="@drawable/ic_laundry_service_svgrepo_com"
                         android:drawablePadding="8dp"
-                        android:text="Lavadora"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-
-                        />
+                        android:text="Lavadora"/>
 
                     <TextView
                         android:id="@+id/textView11"
+                        style="@style/TextoGrande"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="10dp"
-
                         android:drawableLeft="@drawable/ic_wifi_svgrepo_com"
                         android:drawablePadding="8dp"
-                        android:text="Wifi"
-                        android:textColor="@color/black"
-                        android:textSize="18dp"
-
-                        />
+                        android:text="Wifi"/>
 
                     <TextView
                         android:id="@+id/textView12"
@@ -278,12 +246,13 @@
                         android:id="@+id/iniciarGoogle"
                         style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
-                        android:layout_height="60dp"
+                        android:layout_height="52dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
                         android:text="Mostrar todos los servicios"
                         android:textColor="@color/black"
+                        android:textSize="14sp"
                         app:cornerRadius="12dp"
                         app:iconGravity="textEnd"
                         app:iconTint="@null"
@@ -294,8 +263,6 @@
                         android:layout_height="60dp"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"></LinearLayout>
-
-
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
@@ -308,13 +275,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="56dp"
             android:background="@color/white"
+            android:elevation="10dp"
             android:orientation="vertical">
-
-            <com.google.android.material.divider.MaterialDivider
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -324,14 +288,13 @@
 
                 <TextView
                     android:id="@+id/preciodetails"
+                    style="@style/TextoGrande"
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center|left"
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
-                    android:text="$15000 / noche"
-                    android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:text="$15000 / noche" />
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -343,14 +306,19 @@
                     android:gravity="end">
 
                     <com.google.android.material.button.MaterialButton
-                        style="@style/Botosolo"
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:backgroundTint="@color/white"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        app:iconPadding="0dp"
                         app:icon="@drawable/ic_send"
                         app:iconGravity="textStart"
-                        app:iconPadding="0dp"
-                        app:iconTint="@color/paperplane" />
+                        app:iconTint="@color/paperplane"
+                        app:strokeColor="@color/white" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
