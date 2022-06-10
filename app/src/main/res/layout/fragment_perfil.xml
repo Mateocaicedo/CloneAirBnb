@@ -39,7 +39,7 @@
                             android:layout_width="130dp"
                             android:layout_height="130dp"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-                            app:srcCompat="@drawable/fotoperfil" />
+                            app:srcCompat="@drawable/ic_cuenta" />
                     </LinearLayout>
                 </FrameLayout>
 
@@ -62,7 +62,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_cuenta"
-                            android:text="Anfitrion - Huesped" />
+                            android:text="" />
 
                         <TextView
                             android:id="@+id/PerfilVerficado"
@@ -70,7 +70,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_protection"
-                            android:text="Cuenta verificada" />
+                            android:text="Cuenta verificada"
+                            android:visibility="gone" />
 
                         <TextView
                             android:id="@+id/PerfilNumeroResena"
@@ -78,7 +79,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableLeft="@drawable/ic_star"
-                            android:text="130 Reseñas" />
+                            android:text="130 Reseñas"
+                            android:visibility="gone" />
+
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -101,7 +104,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingBottom="6dp"
-                        android:text="Hen-Sen Huang"></TextView>
+                        android:text="..."></TextView>
 
                     <TextView
                         android:id="@+id/PerfilDescripcion"
@@ -109,8 +112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingBottom="10dp"
-                        android:text="Acerca de mi: Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.
-"/>
+                        android:text="..."/>
 
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
@@ -134,7 +136,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/ic_location"
-                        android:text="Bogota, Colombia" />
+                        android:text="..." />
 
                     <TextView
                         android:id="@+id/PerfilIdioma"
@@ -142,7 +144,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/ic_oojs_ui_icon_language_ltr"
-                        android:text="Ingles · Español · Mandarín" />
+                        android:text="Ingles · Español · Mandarín"
+                        android:visibility="gone" />
+
 
                     <TextView
                         android:id="@+id/PerfilTrabajo"
@@ -150,7 +154,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/ic_facebook_jobs"
-                        android:text="Trabaja en Odontologia" />
+                        android:text="Trabaja en Odontologia"
+                        android:visibility="gone" />
+
                 </LinearLayout>
 
                 <com.google.android.material.divider.MaterialDivider
@@ -175,6 +181,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"/>
+
+            <com.hbb20.CountryCodePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/invisiblePais"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                />
         </LinearLayout>
 
     </ScrollView>

@@ -57,6 +57,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4.97"
+                                android:visibility="gone"
                                 style="@style/Texto"/>
                             <TextView
                                 android:layout_width="wrap_content"
@@ -72,6 +73,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="4 reseñas"
+                                android:visibility="gone"
+
                                 style="@style/Texto"/>
                         </LinearLayout>
 
@@ -86,7 +89,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Cartagena"
-                                style="@style/Texto"/>
+                                style="@style/Texto"
+                                android:visibility="gone"
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -109,7 +114,7 @@
                             android:layout_height="45dp"
                             android:visibility="gone"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-                            app:srcCompat="@drawable/fotoperfil" />
+                            app:srcCompat="@drawable/ic_cuenta" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -322,6 +327,14 @@
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/invisiblePaisAlojamiento"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            />
     </LinearLayout>
 
 

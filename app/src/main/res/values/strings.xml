@@ -17,4 +17,8 @@
     <string name="Settings">Configuraciones</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="prefs_file_name">com.airbnb.android.preferences</string>
+    <string name="default_profile_pic">https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png</string>
+
 </resources>

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.common.math.PairedStats
 import com.grupoParcial.airbnbclone.Detalles_alojamiento
 import com.grupoParcial.airbnbclone.R
 import com.grupoParcial.airbnbclone.adaptadores.AlojamientosAdapter
@@ -58,26 +59,6 @@ class search : Fragment(), AlojamientosAdapter.OnItemCLick {
         }
     }
 
-    private fun getFotos(): ArrayList<CarouselItem> {
-        return object : ArrayList<CarouselItem>() {
-            init {
-                add(CarouselItem("https://images.alphacoders.com/112/1122706.png"))
-                add(CarouselItem("https://preview.redd.it/vsifwh3t5ww61.png?auto=webp&s=bf5cbedfca188048ccf8a878146f55eaeccfb776"))
-                add(CarouselItem("https://staticdelivery.nexusmods.com/images/3333/11400410-1611689055.jpg"))
-
-            }
-        }
-    }
-
-    private fun getFotos2(): ArrayList<CarouselItem> {
-        return object : ArrayList<CarouselItem>() {
-            init {
-                add(CarouselItem("https://i.pinimg.com/originals/55/c9/7c/55c97c51092d9bec00460abab958b5b9.jpg"))
-                add(CarouselItem("https://www.gtabase.com/igallery/1101-1200/GTAOnline_Apartment_StiltHouse_01_Overview-1193-512.jpg"))
-            }
-        }
-    }
-
     private fun getValores2(): ArrayList<Ciudad> {
         return object : ArrayList<Ciudad>() {
             init {
@@ -118,7 +99,8 @@ class search : Fragment(), AlojamientosAdapter.OnItemCLick {
                         "Rincon del vago",
                         "2 Habitaciones - 3 camas",
                         "cr 88 #81-188",
-                        150,
+                        "150",
+                        "hi",
                         getFotos()
                     )
                 )
@@ -127,7 +109,8 @@ class search : Fragment(), AlojamientosAdapter.OnItemCLick {
                         "Alcatraz",
                         "2 Habitaciones - 3 camas",
                         "cr 88 #81-188",
-                        150,
+                        "150",
+                        "hi",
                         getFotos2()
                     )
                 )
@@ -136,14 +119,33 @@ class search : Fragment(), AlojamientosAdapter.OnItemCLick {
                         "Mirabella",
                         "2 Habitaciones - 3 camas",
                         "cr 88 #81-188",
-                        150,
+                        "150",
+                        "hi",
                         getFotos()
                     )
                 )
             }
         }
     }
+    private fun getFotos(): ArrayList<CarouselItem> {
+        return object : ArrayList<CarouselItem>() {
+            init {
+                add(CarouselItem("https://images.alphacoders.com/112/1122706.png"))
+                add(CarouselItem("https://preview.redd.it/vsifwh3t5ww61.png?auto=webp&s=bf5cbedfca188048ccf8a878146f55eaeccfb776"))
+                add(CarouselItem("https://staticdelivery.nexusmods.com/images/3333/11400410-1611689055.jpg"))
 
+            }
+        }
+    }
+
+    private fun getFotos2(): ArrayList<CarouselItem> {
+        return object : ArrayList<CarouselItem>() {
+            init {
+                add(CarouselItem("https://i.pinimg.com/originals/55/c9/7c/55c97c51092d9bec00460abab958b5b9.jpg"))
+                add(CarouselItem("https://www.gtabase.com/igallery/1101-1200/GTAOnline_Apartment_StiltHouse_01_Overview-1193-512.jpg"))
+            }
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -204,6 +206,7 @@ class search : Fragment(), AlojamientosAdapter.OnItemCLick {
         precio: String,
         desc: String,
         dire: String,
+        pais: String,
         imagen: ArrayList<String?>
     ) {
         Toast.makeText(context, "Item $position", Toast.LENGTH_SHORT).show()

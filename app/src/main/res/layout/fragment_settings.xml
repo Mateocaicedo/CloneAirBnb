@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.grupoParcial.airbnbclone.fragmentos.FragmentSettings">
 
-    <TextView
+    <Button
+        android:id="@+id/crearAlojamiento"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Settings"
+        android:layout_height="60dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/fondoperfil"
         android:textColor="@color/black"
-        android:textSize="45dp"
-        android:textAlignment="center"
-        android:gravity="center"/>
+        android:text="Crear Alojamiento"/>
 
-</FrameLayout>
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/editarPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/fondoperfil"
+        android:drawableTint="@color/white"
+        android:textColor="@color/black"
+        android:text="Editar Perfil"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/cerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/fondoperfil"
+        android:textColor="@color/black"
+        android:text="Cerrar Sesion"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"/>
+
+</LinearLayout>

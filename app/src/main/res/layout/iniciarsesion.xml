@@ -29,21 +29,22 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="match_parent"
+                style="@style/Titulo"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
                 android:text="Inicio de sesión"
-                android:textAlignment="center"
-                android:textColor="@color/AzulLogo"
-                style="@style/Titulo"/>
+                android:layout_gravity="center"
+                android:textColor="@color/AzulLogo" />
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="match_parent"
+                style="@style/TextoDescripcion"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Para continuar inicie sesión"
-                android:textAlignment="center"
-                style="@style/TextoDescripcion"/>
+                android:layout_gravity="center" />
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -65,6 +66,7 @@
                 app:startIconDrawable="@drawable/ic_baseline_email_24">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/iniciarCorreo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -82,13 +84,14 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/iniciarContrasena"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/iniciarHome"
+                android:id="@+id/iniciarBoton"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginLeft="25dp"

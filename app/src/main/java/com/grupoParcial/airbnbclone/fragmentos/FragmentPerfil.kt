@@ -1,16 +1,28 @@
 package com.grupoParcial.airbnbclone.fragmentos
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.imageview.ShapeableImageView
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import com.grupoParcial.airbnbclone.Detalles_alojamiento
 import com.grupoParcial.airbnbclone.R
-import com.grupoParcial.airbnbclone.adaptadores.ReservasAdapter
-import com.grupoParcial.airbnbclone.model.Reservas
+import com.grupoParcial.airbnbclone.adaptadores.AlojamientosAdapter
+import com.grupoParcial.airbnbclone.model.Alojamientos
+import com.hbb20.CountryCodePicker
+import com.squareup.picasso.Picasso
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,16 +34,18 @@ private const val ARG_PARAM2 = "param2"
  * Use the [FragmentPerfil.newInstance] factory method to
  * create an instance of this fragment.
  */
-class FragmentPerfil : Fragment() {
+class FragmentPerfil : Fragment(), AlojamientosAdapter.OnItemCLick {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
-    private val AlojamientoUsuario :ArrayList<Reservas> by lazy { getValores() }
-    private lateinit var recycler: RecyclerView
-    private lateinit var adapter: ReservasAdapter
-    private val LayoutManager by lazy { LinearLayoutManager(context) }
+    private lateinit var list: ArrayList<Alojamientos>
 
+    private lateinit var recycler: RecyclerView
+    private lateinit var adapter: AlojamientosAdapter
+
+    val user = Firebase.auth.currentUser
+    val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,38 +55,101 @@ class FragmentPerfil : Fragment() {
         }
     }
 
-    private fun getValores(): ArrayList<Reservas>{
-        return object: ArrayList<Reservas>(){
-            init {
-                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
-                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
-                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
-                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
-                add(Reservas("Nombre","Descripcion", "https://cdn.plainconcepts.com/wp-content/uploads/2021/12/Web3.0.jpg"))
+    private fun getFotos(fotosEncontradas: ArrayList<String>): ArrayList<CarouselItem> {
+        val fotos = ArrayList<CarouselItem>()
 
-            }
+        for (foto in fotosEncontradas) {
+            fotos.add(CarouselItem(foto))
         }
+        return fotos
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view=inflater.inflate(R.layout.fragment_perfil, container, false)
+        val view = inflater.inflate(R.layout.fragment_perfil, container, false)
+
+        setPerfil()
+
         recycler = view.findViewById(R.id.PerfilAlojamientoUser) as RecyclerView
 
         setRecyclerView()
-
         return view
     }
 
-    fun setRecyclerView(){
-        recycler.setHasFixedSize(true)
-        recycler.itemAnimator = DefaultItemAnimator()
-        recycler.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
-        adapter = (ReservasAdapter(AlojamientoUsuario))
-        recycler.adapter = adapter
+    private fun setPerfil() {
+        db.collection("user").document(user?.email ?: "").get().addOnSuccessListener { document ->
+            if (document != null) {
+                val foto = view?.findViewById<ShapeableImageView>(R.id.Foto)
+                val nombre = view?.findViewById<TextView>(R.id.PerfilNombre)
+                val pais = view?.findViewById<TextView>(R.id.PerfilUbicacion)
+                val descripcion = view?.findViewById<TextView>(R.id.PerfilDescripcion)
+                val tipo = view?.findViewById<TextView>(R.id.PerfilTipo)
+                val invisiblePais = view?.findViewById<CountryCodePicker>(R.id.invisiblePais)
+
+                val urlFoto = document.get("foto").toString()
+
+                try {
+                    Picasso.get().load(urlFoto).fit().centerCrop().into(foto)
+                } catch (e: Exception) {
+                }
+                nombre?.text = "${document.getString("nombre")} ${document.getString("apellido")}"
+
+
+                descripcion?.text = if (document.get("descripcion") != "") {
+                    document.getString("descripcion")
+                } else {
+                    "Aun no tiene descripcion"
+                }
+
+                pais?.text = if (document.getString("pais") != "") {
+                    invisiblePais?.setCountryForNameCode(document.getString("pais"))
+                    invisiblePais?.selectedCountryName
+                } else {
+                    "Pais no definido"
+                }
+                tipo?.text = if (document.getString("tipo").toString() == "0") {
+                    "Huesped"
+                } else {
+                    "Anfitrion - Huesped"
+                }
+
+            }
+        }
+
+    }
+
+    private fun setRecyclerView() {
+        val alojamientos = ArrayList<Alojamientos>()
+        db.collection("alojamientos").whereEqualTo("usuario", user?.email).get()
+            .addOnSuccessListener { document ->
+                document.forEach {
+                    alojamientos.add(
+                        Alojamientos(
+                            it.data["nombre"].toString(),
+                            "",
+                            it.data["direccion"].toString(),
+                            it.data["precio"].toString(),
+                            it.data["pais"].toString(),
+                            getFotos(it.data["fotos"] as ArrayList<String>) as ArrayList<CarouselItem>
+                        )
+                    )
+                }
+                list = alojamientos
+
+                recycler.setHasFixedSize(true)
+                recycler.itemAnimator = DefaultItemAnimator()
+                recycler.layoutManager =
+                    LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+                Toast.makeText(context, "${list.size}", Toast.LENGTH_LONG).show()
+
+                adapter = (AlojamientosAdapter(list, this))
+                recycler.adapter = adapter
+            }
     }
 
     companion object {
@@ -94,4 +171,26 @@ class FragmentPerfil : Fragment() {
                 }
             }
     }
+
+    override fun onItemClick(
+        position: Int,
+        nombre: String,
+        precio: String,
+        desc: String,
+        dire: String,
+        pais: String,
+        imagen: ArrayList<String?>
+    ) {
+        Toast.makeText(context, "Item $position", Toast.LENGTH_SHORT).show()
+        val intento1 = Intent(context, Detalles_alojamiento::class.java)
+        intento1.putExtra("nombre", nombre)
+        intento1.putExtra("direccion", dire)
+        intento1.putExtra("precio", precio)
+        intento1.putExtra("descripcion", desc)
+        intento1.putExtra("pais", pais)
+        intento1.putStringArrayListExtra("array", imagen)
+
+        startActivity(intento1)
+    }
+
 }

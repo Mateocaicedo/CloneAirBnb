@@ -22,6 +22,7 @@ class AlojamientosAdapter(
             precio: String,
             desc: String,
             dire: String,
+            pais: String,
             fotos: ArrayList<String?>
         )
     }
@@ -33,7 +34,6 @@ class AlojamientosAdapter(
         val precio: TextView = itemView.findViewById(R.id.preciosearch)
         val descripcion: TextView = itemView.findViewById(R.id.descripcionsearch)
         val image: ImageCarousel = itemView.findViewById(R.id.imagensearch)
-
         val direccion: TextView = itemView.findViewById(R.id.direccionsearch)
 
 
@@ -60,6 +60,7 @@ class AlojamientosAdapter(
                     precio.text.toString(),
                     descripcion.text.toString(),
                     direccion.text.toString(),
+                    alojamientos[position].Pais,
                     arrayList
                 )
             }
